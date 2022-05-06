@@ -1,0 +1,43 @@
+{
+   "version":"2.0.0",
+   "tasks": [
+      {
+         "type": "cppbuild",
+         "label": "Build Walnut App",
+         "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+         "args": [
+            "-fdiagnostics-color=always",
+            "-I",
+            "${workspaceRoot}\\Walnut\\Vendor",
+            "-I",
+            "C:\\VulkanSDK\\1.3.211.0\\Include",
+            "-I",
+            "${workspaceRoot}\\Walnut\\Walnut\\src\\Walnut",
+            "-o",
+            "${workspaceRoot}\\RayTracing.exe",
+            "${workspaceRoot}\\Walnut\\WalnutApp\\src\\*.cpp",
+            "${workspaceRoot}\\Walnut\\Walnut\\src\\Walnut\\*.cpp",
+            "${workspaceRoot}\\Walnut\\Walnut\\src\\Walnut\\ImGui\\*.cpp",
+            "-L",
+				"${workspaceRoot}\\Walnut\\vendor\\glfw-3.3.7_64\\lib-mingw-w64",
+            "-L",
+				"C:\\VulkanSDK\\1.3.211.0\\Lib",
+            "-l",
+            "glfw3",
+            "-l",
+            "gdi32",
+            "-l",
+            "vulkan-1",
+            "-O2"
+         ],
+         "options": {
+            "cwd": "${fileDirname}"
+         },
+         "problemMatcher": [
+            "$gcc"
+         ],
+         "group": "build",
+         "detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+      }
+   ],
+}
